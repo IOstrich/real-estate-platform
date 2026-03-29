@@ -29,7 +29,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+        <spring.boot.version>4.0.0</spring.boot.version>
         <!-- 自定义第三方依赖版本 -->
         <mybatis.version>3.0.3</mybatis.version>
         <mysql.version>8.0.33</mysql.version>
@@ -53,10 +53,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
 
@@ -107,17 +109,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- 全局构建插件 -->
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring.boot.version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-
+    <!-- Spring Boot parent already manages the Maven plugin; no extra pluginManagement needed. -->
 </project>
