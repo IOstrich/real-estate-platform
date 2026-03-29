@@ -40,6 +40,7 @@
 
     <!-- 子模块声明（创建子模块后在这里添加） -->
     <modules>
+        <module>house-service</module>
         <!--        <module>xxx-common</module>-->
         <!--        <module>xxx-web</module>-->
         <!--        <module>xxx-service</module>-->
@@ -52,12 +53,10 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
-                <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
 
